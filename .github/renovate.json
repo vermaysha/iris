@@ -7,7 +7,6 @@
     ":automergeAll",
     ":automergeBranch",
     ":disableDependencyDashboard",
-    ":pinVersions",
     ":onlyNpm",
     ":label(dependencies)"
   ],
