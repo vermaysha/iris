@@ -58,7 +58,12 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - run: pnpm run build
+      - name: Build app
+        run: pnpm run build
+
+      - name: Install Snapcraft
+        if: ${{ matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest' }}
+        uses: samuelmeuli/action-snapcraft@v2
 
       - name: Compile artifacts ${{ inputs.dry-run && '' || 'and upload them to github release' }}
         # I use this action because it is capable of retrying multiple times if there are any issues with the distribution server
