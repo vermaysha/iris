@@ -12,19 +12,16 @@ concurrency:
   group: release-${{ github.ref }}
   cancel-in-progress: true
 
-
 defaults:
   run:
     shell: 'bash'
 
-
 jobs:
   draft_release:
-
     strategy:
       fail-fast: true
       matrix:
-        os: [ macos-latest, ubuntu-latest, windows-latest ]
+        os: [macos-latest, ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
