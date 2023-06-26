@@ -2,7 +2,7 @@
   "extends": [
     "config:base",
     ":semanticCommits",
-    ":semanticCommitTypeAll(deps)",
+    ":semanticCommitTypeAll(build)",
     ":semanticCommitScopeDisabled",
     ":automergeAll",
     ":automergeBranch",
